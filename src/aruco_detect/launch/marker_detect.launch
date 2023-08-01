@@ -1,0 +1,12 @@
+<launch>
+
+    <node pkg="detect_marks" type="create_map_node" name="create_map_node" output="screen"/>
+    
+    <node pkg="detect_marks" type="find_mark_node" name="find_mark_node" output="screen"/>
+
+    <node pkg="detect_marks" type="record_mark_node" name="record_mark_node" output="screen"/>
+
+    <node pkg="rviz" type="rviz" name="find_mark" args="-d $(find detect_marks)/rviz_cfg/optimization.rviz" />
+
+</launch>
+
